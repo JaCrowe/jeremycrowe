@@ -4,9 +4,9 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Jeremy Crowe'
-export const siteTitle = 'More or less a couple of links.'
+export const siteTitle = 'Jeremy Crowe'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: { children: any; home?: boolean }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +25,8 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              // src="/images/profile.jpg"
+              src="/images/self-portrait.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
