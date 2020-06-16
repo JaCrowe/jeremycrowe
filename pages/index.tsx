@@ -30,28 +30,13 @@ export default function Home({ allPostsData }) {
               style={{ width: '64px', height: '64px', margin: '4px' }}
             />
           </a>
-          <a rel="me" href="https://keybase.io/jacrowe">
-            <img
-              src="/images/keybase.svg"
-              style={{ width: '64px', height: '64px', margin: '4px' }}
-            />
-          </a>
+
           <a rel="me" href="https://github.com/JaCrowe">
             <img
               src="/images/github.svg"
               style={{ width: '64px', height: '64px', margin: '4px' }}
             />
           </a>
-
-          <a rel="me" href="https://www.linkedin.com/in/jeremyacrowe/">
-            <img
-              src="/images/linkedin.svg"
-              style={{ width: '64px', height: '64px', margin: '4px' }}
-            />
-          </a>
-          {/* https://www.linkedin.com/in/jeremyacrowe/ */}
-          {/* https://keybase.io/jacrowe */}
-          {/* https://github.com/JaCrowe */}
         </div>
       </section>
     </Layout>
