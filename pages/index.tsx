@@ -18,7 +18,7 @@ export default function Home({ allPostsData }) {
         <div
           style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center' }}
         >
-          <a rel="me" href="https://realscience.social/@JaCrowe">
+          <a rel="me" href="https://mastodon.online/@JaCrowe">
             <img
               src="/images/mastodon.svg"
               style={{ width: '64px', height: '64px', margin: '4px' }}
