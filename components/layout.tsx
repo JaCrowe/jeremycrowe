@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Tracking from './tracking'
 
 const name = 'Jeremy Crowe'
 export const siteTitle = 'Jeremy Crowe'
@@ -11,7 +12,7 @@ export default function Layout({ children, home }: { children: any; home?: boole
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Learn how to build a personal website using Next.js" />
+        <meta name="description" content="Personal website for Jeremy Crowe" />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
@@ -20,12 +21,13 @@ export default function Layout({ children, home }: { children: any; home?: boole
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* Matomo Tracking Code */}
+        {/* <Tracking /> */}
       </Head>
       <header className={styles.header}>
         {home ? (
           <>
             <img
-              // src="/images/profile.jpg"
               src="/images/self-portrait.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
