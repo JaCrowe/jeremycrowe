@@ -24,21 +24,32 @@ export default function Home({ allPostsData }) {
               style={{ width: '64px', height: '64px', margin: '4px' }}
             />
           </a>
-          <a rel="me" href="https://pixelfed.social/JaCrowe">
+          <a href="https://pixelfed.social/JaCrowe">
             <img
               src="/images/pixelfed-icon-color.svg"
               style={{ width: '64px', height: '64px', margin: '4px' }}
             />
           </a>
 
-          <a rel="me" href="https://github.com/JaCrowe">
+          <a href="https://github.com/JaCrowe">
             <img
               src="/images/github.svg"
               style={{ width: '64px', height: '64px', margin: '4px' }}
             />
           </a>
+
+          <a href="https://dev.lemmy.ml/u/JaCrowe">
+            <img src="/images/lemmy.svg" style={{ width: '64px', height: '64px', margin: '4px' }} />
+          </a>
+
+          <a href="https://greatview.video/video-channels/avacadohand">
+            <img
+              src="/images/peertube.svg"
+              style={{ width: '64px', height: '64px', margin: '4px' }}
+            />
+          </a>
         </div>
-        <p>
+        {/* <p>
           Feeling sour about monolithic social media?{' '}
           <a href="https://www.nytimes.com/2020/06/22/podcasts/the-daily/facebook-twitter-black-lives-matter-trump.html">
             Well, you should if you care about black lives.
@@ -52,7 +63,7 @@ export default function Home({ allPostsData }) {
           ! My personal favorites at the moment far are{' '}
           <a href="https://joinmastodon.org/">Mastodon</a> and{' '}
           <a href="https://pixelfed.org/">PixelFed</a>
-        </p>
+        </p> */}
       </section>
     </Layout>
   )
