@@ -2,8 +2,17 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { GetStaticProps } from 'next'
 
-export default function Home({ allPostsData }) {
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
@@ -49,27 +58,12 @@ export default function Home({ allPostsData }) {
             />
           </a>
         </div>
-        {/* <p>
-          Feeling sour about monolithic social media?{' '}
-          <a href="https://www.nytimes.com/2020/06/22/podcasts/the-daily/facebook-twitter-black-lives-matter-trump.html">
-            Well, you should if you care about black lives.
-          </a>{' '}
-          Want to do something about it? Get involved with a project that makes use of the{' '}
-          <a href="https://www.w3.org/TR/activitypub">ActivityPub</a> protocol! A list of projects
-          may be found{' '}
-          <a href="https://git.feneas.org/feneas/fediverse/-/wikis/watchlist-for-activitypub-apps">
-            here
-          </a>
-          ! My personal favorites at the moment far are{' '}
-          <a href="https://joinmastodon.org/">Mastodon</a> and{' '}
-          <a href="https://pixelfed.org/">PixelFed</a>
-        </p> */}
       </section>
     </Layout>
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
   return {
     props: {
