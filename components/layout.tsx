@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Tracking from './tracking'
 
 const name = 'Jeremy Crowe'
 export const siteTitle = 'Jeremy Crowe'
@@ -13,6 +14,7 @@ export default function Layout({ children, home }: { children: React.ReactNode; 
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Personal website for Jeremy Crowe" />
         <meta name="og:title" content={siteTitle} />
+        <Tracking />
       </Head>
       <header className={styles.header}>
         {home ? (
