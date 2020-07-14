@@ -23,6 +23,35 @@ export default function SocialLinks() {
   )
 }
 
+type SocialLink = {
+  link: string
+  src: string
+}
+
+const socialLinks: SocialLink[] = [
+  {
+    link: 'https://mastodon.online/@JaCrowe',
+    src: '/images/mastodon.svgv',
+  },
+  {
+    link: 'https://pixelfed.social/JaCrowe',
+    src: '/images/pixelfed-icon-color.svg',
+  },
+
+  {
+    link: 'https://github.com/JaCrowe',
+    src: '/images/github.svg',
+  },
+  {
+    link: 'https://dev.lemmy.ml/u/JaCrowe',
+    src: '/images/lemmy.svg',
+  },
+  {
+    link: 'https://greatview.video/video-channels/avacadohand',
+    src: '/images/peertube.svg',
+  },
+]
+
 const useStyles = makeStyles({
   container: {
     display: 'flex',

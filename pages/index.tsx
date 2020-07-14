@@ -4,7 +4,7 @@ import { Typography, Container } from '@material-ui/core'
 import SocialLinks from '../components/SocialLinks'
 import ShrinkContainer from '../components/ShrinkContainer'
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Head>
@@ -24,3 +24,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default Home

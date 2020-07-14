@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core'
 import { ReactElement } from 'react'
 
-export default function PrivacyPolicy() {
+const PrivacyPolicy = () => {
   const theme = useTheme()
   const classes = useStyles({ theme })
   return (
@@ -151,17 +151,23 @@ const useStyles = makeStyles({
   dataPoint: ({ theme }: { theme: Theme }) => {
     return {
       fontWeight: 600,
+      wordBreak: 'break-all',
       [theme.breakpoints.up('sm')]: {
         whiteSpace: 'nowrap',
+        wordBreak: 'keep-all',
       },
     }
   },
   example: ({ theme }: { theme: Theme }) => {
     return {
       fontStyle: 'italic',
+      wordBreak: 'break-all',
       [theme.breakpoints.up('sm')]: {
         whiteSpace: 'nowrap',
+        wordBreak: 'keep-all',
       },
     }
   },
 })
+
+export default PrivacyPolicy
