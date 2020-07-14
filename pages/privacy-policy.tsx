@@ -9,14 +9,11 @@ import {
   TableBody,
   makeStyles,
   Card,
-  useTheme,
-  Theme,
 } from '@material-ui/core'
 import { ReactElement } from 'react'
 
 const PrivacyPolicy = () => {
-  const theme = useTheme()
-  const classes = useStyles({ theme })
+  const classes = useStyles()
   return (
     <Layout>
       <Container>
@@ -34,10 +31,9 @@ const PrivacyPolicy = () => {
 }
 
 const PrivacyItemTable = () => {
-  const theme = useTheme()
-  const classes = useStyles({ theme })
+  const classes = useStyles()
   return (
-    <Card>
+    <Card className={classes.card}>
       <Table>
         <TableHead>
           <TableRow>
@@ -148,25 +144,16 @@ const useStyles = makeStyles({
     whiteSpace: 'nowrap',
     textTransform: 'uppercase',
   },
-  dataPoint: ({ theme }: { theme: Theme }) => {
-    return {
-      fontWeight: 600,
-      wordBreak: 'break-all',
-      [theme.breakpoints.up('sm')]: {
-        whiteSpace: 'nowrap',
-        wordBreak: 'keep-all',
-      },
-    }
+  dataPoint: {
+    fontWeight: 600,
+    whiteSpace: 'nowrap',
   },
-  example: ({ theme }: { theme: Theme }) => {
-    return {
-      fontStyle: 'italic',
-      wordBreak: 'break-all',
-      [theme.breakpoints.up('sm')]: {
-        whiteSpace: 'nowrap',
-        wordBreak: 'keep-all',
-      },
-    }
+  example: {
+    fontStyle: 'italic',
+    whiteSpace: 'nowrap',
+  },
+  card: {
+    minWidth: '600px',
   },
 })
 

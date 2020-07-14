@@ -1,15 +1,13 @@
 import Head from 'next/head'
 import Tracking from './tracking'
 import Link from 'next/link'
+// import Link as MuiLink from 'next/link'
+
+import { makeStyles, Link as MuiLink } from '@material-ui/core'
 export const siteTitle = 'Jeremy Crowe'
 
-export default function MinimalLayout({
-  children,
-  home,
-}: {
-  children: React.ReactNode
-  home?: boolean
-}) {
+export default function MinimalLayout({ children }: { children: React.ReactNode }) {
+  const classes = useStyles()
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <div style={{ flex: '1 0 100vh', display: 'flex', flexDirection: 'column' }}>
@@ -37,8 +35,11 @@ export default function MinimalLayout({
               justifyContent: 'flex-end',
             }}
           >
+            <Link href="/">
+              <MuiLink className={classes.link}>Home</MuiLink>
+            </Link>
             <Link href="/privacy-policy">
-              <a>Privacy Policy</a>
+              <MuiLink className={classes.link}>Privacy Policy</MuiLink>
             </Link>
           </div>
         </footer>
@@ -46,3 +47,9 @@ export default function MinimalLayout({
     </div>
   )
 }
+
+const useStyles = makeStyles({
+  link: {
+    marginLeft: '8px',
+  },
+})
