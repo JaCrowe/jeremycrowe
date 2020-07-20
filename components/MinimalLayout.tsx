@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Tracking from './tracking'
 import Link from 'next/link'
-// import Link as MuiLink from 'next/link'
-
 import { makeStyles, Link as MuiLink } from '@material-ui/core'
 export const siteTitle = 'Jeremy Crowe'
 
