@@ -4,21 +4,11 @@ export default function SocialLinks() {
   const classes = useStyles()
   return (
     <div className={classes.container}>
-      <a rel="me" href="https://mastodon.online/@JaCrowe">
-        <img src="/images/mastodon.svg" className={classes.socialIcon} />
-      </a>
-      <a href="https://pixelfed.social/JaCrowe">
-        <img src="/images/pixelfed-icon-color.svg" className={classes.socialIcon} />
-      </a>
-      <a href="https://github.com/JaCrowe">
-        <img src="/images/github.svg" className={classes.socialIcon} />
-      </a>
-      <a href="https://dev.lemmy.ml/u/JaCrowe">
-        <img src="/images/lemmy.svg" className={classes.socialIcon} />
-      </a>
-      <a href="https://greatview.video/video-channels/avacadohand">
-        <img src="/images/peertube.svg" className={classes.socialIcon} />
-      </a>
+      {socialLinks.map(({ link, src, alt }) => (
+        <a rel="me" href={link}>
+          <img src={src} alt={alt} className={classes.socialIcon} />
+        </a>
+      ))}
     </div>
   )
 }
@@ -26,30 +16,36 @@ export default function SocialLinks() {
 type SocialLink = {
   link: string
   src: string
+  alt: string
 }
 
 const socialLinks: SocialLink[] = [
-  {
-    link: 'https://mastodon.online/@JaCrowe',
-    src: '/images/mastodon.svgv',
-  },
-  {
-    link: 'https://pixelfed.social/JaCrowe',
-    src: '/images/pixelfed-icon-color.svg',
-  },
-
+  // {
+  //   link: 'https://mastodon.online/@JaCrowe',
+  //   src: '/images/mastodon.svg',
+  // },
+  // {
+  //   link: 'https://pixelfed.social/JaCrowe',
+  //   src: '/images/pixelfed-icon-color.svg',
+  // },
   {
     link: 'https://github.com/JaCrowe',
     src: '/images/github.svg',
+    alt: "Jeremy Crowe's github account",
   },
   {
-    link: 'https://dev.lemmy.ml/u/JaCrowe',
-    src: '/images/lemmy.svg',
+    link: 'https://www.linkedin.com/in/jeremyacrowe/',
+    src: '/images/linkedin.svg',
+    alt: "Jeremy Crowe's LinkedIn profile",
   },
-  {
-    link: 'https://greatview.video/video-channels/avacadohand',
-    src: '/images/peertube.svg',
-  },
+  // {
+  //   link: 'https://dev.lemmy.ml/u/JaCrowe',
+  //   src: '/images/lemmy.svg',
+  // },
+  // {
+  //   link: 'https://greatview.video/video-channels/avacadohand',
+  //   src: '/images/peertube.svg',
+  // },
 ]
 
 const useStyles = makeStyles({
@@ -59,11 +55,11 @@ const useStyles = makeStyles({
     width: '100%',
     maxWidth: '500px',
     margin: 'auto',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
   socialIcon: {
-    width: '64px',
-    height: '64px',
+    width: '32px',
+    height: '32px',
     margin: '4px',
   },
 })
