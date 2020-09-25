@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 
 const ShrinkContainer: React.FC = (props) => {
   const { children } = props

@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 
 export default function SocialLinks() {
   const classes = useStyles()
@@ -20,14 +20,16 @@ type SocialLink = {
 }
 
 const socialLinks: SocialLink[] = [
-  // {
-  //   link: 'https://mastodon.online/@JaCrowe',
-  //   src: '/images/mastodon.svg',
-  // },
-  // {
-  //   link: 'https://pixelfed.social/JaCrowe',
-  //   src: '/images/pixelfed-icon-color.svg',
-  // },
+  {
+    link: 'https://mastodon.online/@JaCrowe',
+    src: '/images/mastodon.svg',
+    alt: "Jeremy Crowe's github account",
+  },
+  {
+    link: 'https://pixelfed.social/JaCrowe',
+    src: '/images/pixelfed-icon-color.svg',
+    alt: "Jeremy Crowe's github account",
+  },
   {
     link: 'https://github.com/JaCrowe',
     src: '/images/github.svg',
@@ -38,14 +40,6 @@ const socialLinks: SocialLink[] = [
     src: '/images/linkedin.svg',
     alt: "Jeremy Crowe's LinkedIn profile",
   },
-  // {
-  //   link: 'https://dev.lemmy.ml/u/JaCrowe',
-  //   src: '/images/lemmy.svg',
-  // },
-  // {
-  //   link: 'https://greatview.video/video-channels/avacadohand',
-  //   src: '/images/peertube.svg',
-  // },
 ]
 
 const useStyles = makeStyles({

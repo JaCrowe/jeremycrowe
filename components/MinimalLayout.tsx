@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Tracking from './tracking'
 import Link from 'next/link'
-import { makeStyles, Link as MuiLink } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 export const siteTitle = 'Jeremy Crowe'
 
 export default function MinimalLayout({ children }: { children: React.ReactNode }) {
@@ -34,10 +34,10 @@ export default function MinimalLayout({ children }: { children: React.ReactNode 
             }}
           >
             <Link href="/">
-              <MuiLink className={classes.link}>Home</MuiLink>
+              <a className={classes.link}>Home</a>
             </Link>
             <Link href="/privacy-policy">
-              <MuiLink className={classes.link}>Privacy Policy</MuiLink>
+              <a className={classes.link}>Privacy Policy</a>
             </Link>
           </div>
         </footer>
