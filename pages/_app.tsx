@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
         body {
           margin: 0px;
           padding: 0px;
+          font-family: "Roboto", Arial, Helvetica, sans-serif;
         }
       `}</style>
       <Component {...pageProps} />
