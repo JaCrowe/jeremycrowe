@@ -5,7 +5,7 @@ export default function SocialLinks() {
   return (
     <div className={classes.container}>
       {socialLinks.map(({ link, src, alt }) => (
-        <a rel="me" href={link}>
+        <a rel="me" href={link} key={alt}>
           <img src={src} alt={alt} className={classes.socialIcon} />
         </a>
       ))}
