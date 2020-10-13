@@ -1,31 +1,21 @@
 import Layout from '../components/MinimalLayout'
-import {
-  Typography,
-  Container,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  makeStyles,
-  Card,
-} from '@material-ui/core'
 import { ReactElement } from 'react'
+import { makeStyles } from '@material-ui/styles'
 
 const PrivacyPolicy = () => {
   const classes = useStyles()
   return (
     <Layout>
-      <Container>
-        <Typography variant="h1" className={classes.title}>
+      <div className={classes.container}>
+        <h1 className={classes.title}>
           Privacy Policy
-        </Typography>
-        <Typography className={classes.description}>
+        </h1>
+        <p className={classes.description}>
           This website uses <a href="https://plausible.io">Plausible</a> analytics for anonymous
           view tracking.
-        </Typography>
+        </p>
         <PrivacyItemTable />
-      </Container>
+      </div>
     </Layout>
   )
 }
@@ -33,30 +23,30 @@ const PrivacyPolicy = () => {
 const PrivacyItemTable = () => {
   const classes = useStyles()
   return (
-    <Card className={classes.card}>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell className={classes.th}>Data Point</TableCell>
-            <TableCell className={classes.th}>Example</TableCell>
-            <TableCell className={classes.th}>Comment</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+    <div className={classes.card}>
+      <table>
+        <thead>
+          <tr>
+            <th className={classes.th}>Data Point</th>
+            <th className={classes.th}>Example</th>
+            <th className={classes.th}>Comment</th>
+          </tr>
+        </thead>
+        <tbody>
           {privacyItems.map(({ dataPoint, example, comment }) => (
-            <TableRow key={dataPoint}>
-              <TableCell>
-                <Typography className={classes.dataPoint}>{dataPoint}</Typography>
-              </TableCell>
-              <TableCell>
-                <Typography className={classes.example}>{example}</Typography>
-              </TableCell>
-              <TableCell>{comment}</TableCell>
-            </TableRow>
+            <tr key={dataPoint}>
+              <th>
+                <p className={classes.dataPoint}>{dataPoint}</p>
+              </th>
+              <th>
+                <p className={classes.example}>{example}</p>
+              </th>
+              <th>{comment}</th>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
-    </Card>
+        </tbody>
+      </table>
+    </div>
   )
 }
 
@@ -71,14 +61,14 @@ const privacyItems: privacyItem[] = [
     dataPoint: 'Page URL',
     example: 'https://jeremycrowe.ca',
     comment: (
-      <Typography>
+      <p>
         We track the page URL of each page view on our website. We use this to show us which pages
         have been viewed and how many times a particular page has been viewed. <br />
         <br />
         The hostname and path are collected. Query parameters are discarded, except for these
         special query parameters: <code>ref=</code>, <code>source=</code> and{' '}
         <code>utm_source=</code>.
-      </Typography>
+      </p>
     ),
   },
   {
@@ -154,6 +144,14 @@ const useStyles = makeStyles({
   },
   card: {
     minWidth: '600px',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    maxWidth: '500px',
+    margin: 'auto',
+    justifyContent: 'center',
   },
 })
 
