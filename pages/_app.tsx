@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app'
+import { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,5 +12,5 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <Component {...pageProps} />
     </>
-  )
+  );
 }

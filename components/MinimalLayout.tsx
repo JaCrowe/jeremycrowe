@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import Tracking from './tracking'
-import Link from 'next/link'
-import { makeStyles } from '@material-ui/styles'
-export const siteTitle = 'Jeremy Crowe'
-import { FC, ReactNode } from 'react'
-
+import Head from "next/head";
+import Tracking from "./tracking";
+import { makeStyles } from "@material-ui/styles";
+import { FC, ReactNode } from "react";
+import Link from "next/link";
 interface Props {
-  background?: ReactNode
+  background?: ReactNode;
 }
 
-const MinimalLayout: FC<Props> = (props) => {
-  const { children, background } = props
+export const siteTitle = "Jeremy Crowe";
 
-  const classes = useStyles()
+const MinimalLayout: FC<Props> = (props) => {
+  const { children, background } = props;
+
+  const classes = useStyles();
   return (
     <>
       <Head>
@@ -27,52 +27,46 @@ const MinimalLayout: FC<Props> = (props) => {
       </Head>
       <div className={classes.container}>
         <div className={classes.background}>{background}</div>
-        <div className={classes.column}>
-          <header style={{ marginBottom: '32px' }}></header>
-          <main style={{ flexGrow: 1 }}>{children}</main>
-          <footer>
-            <div
-              className={classes.footerLinks}
-            >
-              <Link href="/">
-                <a className={classes.link}>Home</a>
-              </Link>
-              <Link href="/privacy-policy">
-                <a className={classes.link}>Privacy Policy</a>
-              </Link>
-            </div>
-          </footer>
-        </div>
+        {/* <div className={classes.column}> */}
+        {/* <header style{{ marginBottom: "32px" }}></header> */}
+        <main>{children}</main>
+        <footer className={classes.footer}>
+          <Link href="/">
+            <a className={classes.link}>Home</a>
+          </Link>
+          <Link href="/privacy-policy">
+            <a className={classes.link}>Privacy Policy</a>
+          </Link>
+        </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MinimalLayout
+export default MinimalLayout;
 
 const useStyles = makeStyles({
   link: {
-    marginLeft: '8px',
+    marginLeft: "8px",
   },
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'relative'
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    justifyContent: "space-between",
   },
   background: {
     zIndex: -1,
-    position: 'absolute',
-    width: '100%',
-    height: '100%'
+    position: "absolute",
+    width: "100%",
+    height: "100%",
   },
   column: {
-    flex: '1 0 100vh', display: 'flex', flexDirection: 'column'
+    flex: "1 0 100vh",
+    display: "flex",
+    flexDirection: "column",
   },
-  footerLinks: {
-    width: '100%',
-    maxWidth: '1280px',
-    margin: 'auto',
-    padding: '24px',
-    display: 'flex',
-  }
-})
+  footer: {
+    padding: "14px 48px",
+  },
+});
