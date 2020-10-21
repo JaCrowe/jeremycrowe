@@ -7,9 +7,6 @@ import React from "react";
 import Ribbons from "../components/Ribbons";
 
 const Home = () => {
-  // <Layout background={<Ribbons />}>
-  // <Layout background={null}>
-
   return (
     <Layout background={<Ribbons />}>
       <Head>

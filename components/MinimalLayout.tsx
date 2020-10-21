@@ -27,8 +27,6 @@ const MinimalLayout: FC<Props> = (props) => {
       </Head>
       <div className={classes.container}>
         <div className={classes.background}>{background}</div>
-        {/* <div className={classes.column}> */}
-        {/* <header style{{ marginBottom: "32px" }}></header> */}
         <main>{children}</main>
         <footer className={classes.footer}>
           <Link href="/">
