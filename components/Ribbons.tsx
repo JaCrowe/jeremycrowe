@@ -1,6 +1,6 @@
 import { Canvas } from "react-three-fiber";
 import Ribbon from "./Ribbon";
-import { useState, useEffect, FC } from "react";
+import { useState, FC } from "react";
 import useWindowResize from "../hooks/useWindowResize";
 
 const Ribbons: FC = () => {
