@@ -25,11 +25,11 @@ const socialLinks: SocialLink[] = [
   //   src: '/images/mastodon.svg',
   //   alt: "Jeremy Crowe's github account",
   // },
-  {
-    link: "https://pixelfed.social/JaCrowe",
-    src: "/images/pixelfed-icon-color.svg",
-    alt: "Jeremy Crowe's github account",
-  },
+  // {
+  //   link: "https://pixelfed.social/JaCrowe",
+  //   src: "/images/pixelfed-icon-color.svg",
+  //   alt: "Jeremy Crowe's github account",
+  // },
   {
     link: "https://github.com/JaCrowe",
     src: "/images/github.svg",
