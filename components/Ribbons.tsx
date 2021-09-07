@@ -33,7 +33,7 @@ const Ribbons: FC = () => {
       pixelRatio={pixelRatio}
     >
       {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-        <Ribbon offset={i} />
+        <Ribbon offset={i} key={i} />
       ))}
     </Canvas>
   );

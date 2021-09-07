@@ -31,6 +31,11 @@ const socialLinks: SocialLink[] = [
   //   alt: "Jeremy Crowe's github account",
   // },
   {
+    link: "https://matrix.to/#/@jacrowe:matrix.org",
+    src: "/images/element.svg",
+    alt: "Jeremy Crowe's element chat account",
+  },
+  {
     link: "https://github.com/JaCrowe",
     src: "/images/github.svg",
     alt: "Jeremy Crowe's github account",
