@@ -28,14 +28,19 @@ const socialLinks: SocialLink[] = [
     alt: "Jeremy Crowe's github account",
   },
   {
-    link: "https://www.linkedin.com/in/jeremyacrowe/",
+    link: "https://linkedin.com/in/jeremyacrowe/",
     src: "/images/linkedin.svg",
     alt: "Jeremy Crowe's LinkedIn profile",
   },
   {
-    link: "https://www.instagram.com/_crowe_magnon/",
+    link: "https://instagram.com/_crowe_magnon/",
     src: "/images/instagram.svg",
     alt: "Jeremy Crowe's Instagram profile",
+  },
+  {
+    link: "https://www.twitter.com/_crowe_magnon/",
+    src: "/images/twitter.svg",
+    alt: "Jeremy Crowe's Twitter profile",
   },
   {
     link: "https://jacrowe.solidcommunity.net/profile/card#me",
@@ -57,6 +62,7 @@ const socialLinks: SocialLink[] = [
     src: "/images/element.svg",
     alt: "Jeremy Crowe's element chat account",
   },
+  // https://twitter.com/_crowe_magnon
   // {
   //   link: "https://www.linkedin.com/in/jeremyacrowe/",
   //   src: "/images/facebook.svg",
