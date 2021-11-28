@@ -43,6 +43,11 @@ const socialLinks: SocialLink[] = [
     alt: "Jeremy Crowe's Twitter profile",
   },
   {
+    link: "https://www.shadertoy.com/user/crowemagnon",
+    src: "/images/shadertoy.png",
+    alt: "Jeremy Crowe's Shadertoy profile",
+  },
+  {
     link: "https://jacrowe.solidcommunity.net/profile/card#me",
     src: "/images/solidproject.svg",
     alt: "Jeremy Crowe's Solid @solidcommunity.net account",
