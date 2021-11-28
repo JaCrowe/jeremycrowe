@@ -18,7 +18,7 @@ const Home = () => {
             Jeremy Crowe
           </h1>
           <p style={{ marginBottom: "16px", textAlign: "center" }}>
-            Full stack web developer and creative guy.
+            Software developer and creative guy.
           </p>
           <SocialLinks />
         </ShrinkContainer>

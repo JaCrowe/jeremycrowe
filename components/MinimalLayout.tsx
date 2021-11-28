@@ -23,7 +23,8 @@ const MinimalLayout: FC<Props> = (props) => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
-        <Tracking />
+        {/* Bring this back when I bother to make a privacy policy etc. */}
+        {/* <Tracking /> */}
       </Head>
       <div className={classes.container}>
         <div className={classes.background}>{background}</div>
